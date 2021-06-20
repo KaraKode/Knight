@@ -22,8 +22,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/KaraKode/Knight",
+  "manifest": "https://github.com/KaraKode/Knight/releases/download/v0.0.1/system.json",
+  "download": "https://github.com/KaraKode/Knight/archive/refs/tags/v0.0.1.zip",
   "license": "LICENSE.txt"
 }
