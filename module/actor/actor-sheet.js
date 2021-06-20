@@ -18,6 +18,11 @@ export class knightActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
+  /*get template(){
+    return 'systems/knight/templates/actor/actor-${this.actor.data.type}-sheet.html';
+  }*/
+
+  /** @override */
   getData() {
     let isOwner = this.actor.isOwner;
     const data = super.getData();
@@ -34,8 +39,21 @@ export class knightActorSheet extends ActorSheet {
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
-      this._prepareCharacterItems(data);
+      //this._prepareCharacterItems(data);
+      this._prepareItems(data);
+      this._prepareCharacterData(data);
     }
+
+    // Prepare NPC data and items.
+    if(actorData == 'npc'){
+      this._prepareItems(data);
+    }
+
+    //Add roll data for TinyMCE editors
+    data.rollData = data.actor.getRollData();
+
+    //Prepare active effects
+    data.effect = prepareActiveEffectCategories(this.actor.effects);
 
     return data;
   }
