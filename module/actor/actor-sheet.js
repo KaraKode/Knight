@@ -9,8 +9,8 @@ export class knightActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["knight", "sheet", "actor"],
       template: "systems/knight/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 1200,
+      height: 500,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
