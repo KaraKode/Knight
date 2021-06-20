@@ -3,12 +3,12 @@
     "types": ["character"],
     "templates": {
       "base": {
-        "health": {
+        "Point de sante": {
           "value": 10,
           "min": 0,
           "max": 10
         },
-        "power": {
+        "point d'armure": {
           "value": 5,
           "min": 0,
           "max": 5
@@ -24,22 +24,19 @@
         }
       },
       "abilities": {
-        "str": {
+        "Chair": {
           "value": 10
         },
-        "dex": {
+        "Bete": {
           "value": 10
         },
-        "con": {
+        "Machine": {
           "value": 10
         },
-        "int": {
+        "Dame": {
           "value": 10
         },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
+        "Masque": {
           "value": 10
         }
       }
