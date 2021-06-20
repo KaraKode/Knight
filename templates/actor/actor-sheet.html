@@ -5,10 +5,6 @@
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-            <h2 class="nickname"><input name="pseudo" type="text" value="{{actor.pseudo}}" placeholder="Surnom"></h2>
-            <h4 class="archetype"><input name="archetype" type="text" value="{{actor.archetype}}" placeholder="archetype"></h2>
-            <h4 class="blason"><input name="blason" type="text" value="{{actor.blason}}" placeholder="blason"></h2>
-            <h4 class="section"><input name="section" type="text" value="{{actor.section}}" placeholder="section"></h2>
             {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
             use both the "grid" and "grid-Ncol" class where "N" can be any number
             from 1 to 12 and will create that number of columns.  --}}
@@ -47,7 +43,10 @@
           </div>
         </div>
     </header>
-
+    <h2 class="nickname"><input name="pseudo" type="text" value="{{actor.pseudo}}" placeholder="Surnom"></h2>
+    <h4 class="archetype"><input name="archetype" type="text" value="{{actor.archetype}}" placeholder="archetype"></h2>
+    <h4 class="blason"><input name="blason" type="text" value="{{actor.blason}}" placeholder="blason"></h2>
+    <h4 class="section"><input name="section" type="text" value="{{actor.section}}" placeholder="section"></h2>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
