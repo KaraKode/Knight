@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
-  "title": "Boilerplate",
-  "description": "The Boilerplate system for FoundryVTT!",
+  "name": "Knight",
+  "title": "Knight",
+  "description": "A system for knight",
   "version": "1.1.0",
   "minimumCoreVersion": "0.8.3",
   "compatibleCoreVersion": "0.8.6",
