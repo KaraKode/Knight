@@ -43,7 +43,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "feature", "spell","weapon","vehicule"],
     "templates": {
       "base": {
         "description": ""
@@ -60,6 +60,24 @@
     "spell": {
       "templates": ["base"],
       "spellLevel": 1
+    },
+    "weapon":{
+      "templates": [
+        "base"
+      ],
+      "attackWith":"guns",
+      "damage":0,
+      "concealment":0,
+      "reload":0,
+      "bonus":0
+    },
+    "vehicule":{
+      "templates": [
+        "base"
+      ],
+        "acceleration":0,
+        "frame":0,
+        "handling":0
     }
   }
 }
