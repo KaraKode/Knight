@@ -19,6 +19,7 @@ export class knightActorSheet extends ActorSheet {
 
   /** @override */
   get template(){
+    const path = "systems/knight/templates/actor";
     return `${path}/item-${this.item.data.type}-sheet.html`;
   }
 
