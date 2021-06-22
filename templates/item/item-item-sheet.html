@@ -17,7 +17,26 @@
     </header>
     <p>Hello Item</p>
     <div>
-        <textarea name="data.description">{{data.descrioption}}</textarea>
+        <table>
+            <tr>
+                <th>{{localize "knight.weapon.attackWith"}}</th>
+                <th>{{localize "knight.weapon.damage"}}</th>
+                <th>{{localize "knight.weapon.concealment"}}</th>
+                <th>{{localize "knight.weapon.reload"}}</th>
+                <th>{{localize "knight.weapon.bonus"}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <select name="data.attackWith">
+                        {{#select data.attackWith}}
+                        {{#each config.attackTypes as |name type|}}
+                        <option value="{{type}}">{{name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+            </tr>
+        </table>
     </div>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
