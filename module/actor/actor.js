@@ -2,7 +2,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class KnightActor extends Actor {
+export class knightActor extends Actor {
 
   /**
    * Augment the basic actor data with additional dynamic data.
@@ -23,7 +23,7 @@ export class KnightActor extends Actor {
   prepareDerivedData(){
     const actorData = this.data;
     const data = actorData.data;
-    const flags = actorData.flags.Knight || {};
+    const flags = actorData.flags.knight || {};
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.

@@ -2,13 +2,13 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class KnightActorSheet extends ActorSheet {
+export class knightActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["Knight", "sheet", "actor"],
-      template: "systems/Knight/templates/actor/test-sheet.html",
+      classes: ["knight", "sheet", "actor"],
+      template: "systems/knight/templates/actor/test-sheet.html",
       width: 1200,
       height: 500,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]

@@ -1,15 +1,15 @@
 // Import Modules
-import { KnightActor } from "./actor/actor.js";
-import { KnightActorSheet } from "./actor/actor-sheet.js";
-import { KnightItem } from "./item/item.js";
-import { KnightItemSheet } from "./item/item-sheet.js";
+import { knightActor } from "./actor/actor.js";
+import { knightActorSheet } from "./actor/actor-sheet.js";
+import { knightItem } from "./item/item.js";
+import { knightItemSheet } from "./item/item-sheet.js";
 
 
 Hooks.once('init', async function() {
 
-  game.Knight = {
-    KnightActor,
-    KnightItem,
+  game.knight = {
+    knightActor,
+    knightItem,
     rollItemMacro
   };
 
@@ -23,14 +23,14 @@ Hooks.once('init', async function() {
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = KnightActor;
-  CONFIG.Item.documentClass = KnightItem;
+  CONFIG.Actor.documentClass = knightActor;
+  CONFIG.Item.documentClass = knightItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("Knight", KnightActorSheet, { makeDefault: true });
+  Actors.registerSheet("knight", knightActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("Knight", KnightItemSheet, { makeDefault: true });
+  Items.registerSheet("knight", knightItemSheet, { makeDefault: true });
 
   // If you need to add Handlebars helpers, here are a few useful examples:
   Handlebars.registerHelper('concat', function() {
@@ -50,7 +50,7 @@ Hooks.once('init', async function() {
 
 Hooks.once("ready", async function() {
   // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
-  Hooks.on("hotbarDrop", (bar, data, slot) => createKnightMacro(data, slot));
+  Hooks.on("hotbarDrop", (bar, data, slot) => createknightMacro(data, slot));
 });
 
 /* -------------------------------------------- */
@@ -64,13 +64,13 @@ Hooks.once("ready", async function() {
  * @param {number} slot     The hotbar slot to use
  * @returns {Promise}
  */
-async function createKnightMacro(data, slot) {
+async function createknightMacro(data, slot) {
   if (data.type !== "Item") return;
   if (!("data" in data)) return ui.notifications.warn("You can only create macro buttons for owned Items");
   const item = data.data;
 
   // Create the macro command
-  const command = `game.Knight.rollItemMacro("${item.name}");`;
+  const command = `game.knight.rollItemMacro("${item.name}");`;
   let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -78,7 +78,7 @@ async function createKnightMacro(data, slot) {
       type: "script",
       img: item.img,
       command: command,
-      flags: { "Knight.itemMacro": true }
+      flags: { "knight.itemMacro": true }
     });
   }
   game.user.assignHotbarMacro(macro, slot);
