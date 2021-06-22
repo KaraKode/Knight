@@ -31,7 +31,7 @@ export class knightItemSheet extends ItemSheet {
   getData() {
     // Retrieve base data structure.
     const data = super.getData();
-
+    data.config = CONFIG.knight;
     // Grab the item's data.
     const itemData = data.data;
 

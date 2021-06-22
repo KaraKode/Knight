@@ -1,4 +1,5 @@
 // Import Modules
+import {knight} from "./module/config.js"
 import { knightActor } from "./actor/actor.js";
 import { knightActorSheet } from "./actor/actor-sheet.js";
 import { knightItem } from "./item/item.js";
@@ -22,6 +23,7 @@ Hooks.once('init', async function() {
     decimals: 2
   };
 
+  CONFIG.knight = knight;
   // Define custom Document classes
   CONFIG.Actor.documentClass = knightActor;
   CONFIG.Item.documentClass = knightItem;

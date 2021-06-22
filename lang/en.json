@@ -1,1 +1,13 @@
-{}
+{
+    "knight":{
+        "attack":{
+            "none": "",
+            "guns": "guns",
+            "martialArts": "martial arts",
+            "sorcery": "Sorcery",
+            "creature": "Creature",
+            "scroungetech": "Vive la tech",
+            "mutant": "Mutant"
+        }
+    }
+}
