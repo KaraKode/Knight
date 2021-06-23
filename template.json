@@ -1,45 +1,59 @@
 {
   "Actor": {
-    "types": ["character", "npc", "salopar"],
+    "types": [
+      "character",
+      "npc",
+      "salopards",
+      "bandes",
+      "hostiles",
+      "patrons",
+      "colosse"],
     "templates": {
-      "base": {
-        "Point de sante": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "point d'armure": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        }
+      "commonStats":{
+        "Chair":2,
+        "Bete":2,
+        "Machine":2,
+        "Dame":2,
+        "Masque":2,
+        "concept":""
       }
     },
     "character": {
-      "templates": ["base"],
+      "templates": ["commonStats"],
       "biography": "",
-      "attributes": {
-        "level": {
-          "value": 1
-        }
-      },
-      "abilities": {
-        "Chair": {
-          "value": 10
-        },
-        "Bete": {
-          "value": 10
-        },
-        "Machine": {
-          "value": 10
-        },
-        "Dame": {
-          "value": 10
-        },
-        "Masque": {
-          "value": 10
-        }
-      }
+      "ps":0,
+      "pe":0,
+      "ph":0
+    },
+    "npc": {
+      "templates": [
+        "commonStats"
+      ],
+      "biography": ""
+    },
+    "bandes": {
+      "templates": [
+        "commonStats"
+      ],
+      "cohesion": 100
+    },
+    "salopards": {
+      "templates": [
+        "commonStats"
+      ],
+      "biography": ""
+    },
+    "patrons": {
+      "templates": [
+        "commonStats"
+      ],
+      "biography": ""
+    },
+    "colosse": {
+      "templates": [
+        "commonStats"
+      ],
+      "biography": ""
     }
   },
   "Item": {
