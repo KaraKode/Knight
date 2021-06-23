@@ -1,5 +1,5 @@
 // Import Modules
-import {knight} from "./module/config.js"
+import {knight} from "./config.js"
 import { knightActor } from "./actor/actor.js";
 import { knightActorSheet } from "./actor/actor-sheet.js";
 import { knightItem } from "./item/item.js";
