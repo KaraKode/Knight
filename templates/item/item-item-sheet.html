@@ -35,25 +35,59 @@
                         {{/select}}
                     </select>
                 </td>
+                <td>
+                    <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number"/>
+                </td>
+                <td>
+                    <input name="data.concealment" type="text" value="{{data.concealment}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.reload" type="text" value="{{data.reload}}" data-dtype="Number" />
+                </td>
+                <td>
+                    <input name="data.bonus" type="text" value="{{data.bonus}}" data-dtype="Number" />
+                </td>
             </tr>
         </table>
     </div>
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="file">Dossier</a>
+        <a class="item" data-tab="armor">Armure</a>
+        <a class="item" data-tab="fight">Combat</a>
+        <a class="item" data-tab="module">Module</a>
+        <a class="item" data-tab="overdrive">Overdrive</a>
+        <a class="item" data-tab="background">Historique</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
         {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        <div class="tab" data-group="primary" data-tab="file">
+            {{editor content=data.file target="data.file" button=true owner=owner editable=editable}}
         </div>
 
         {{!-- Attributes Tab --}}
-        <div class="tab attributes" data-group="primary" data-tab="attributes">
+        <div class="tab armor" data-group="primary" data-tab="armor">
+            {{!-- As you add new fields, add them in here! --}}
+        </div>
+        {{!-- Description Tab --}}
+        <div class="tab fight" data-group="primary" data-tab="fight">
+            {{!-- As you add new fields, add them in here! --}}
+        </div>
+        
+        {{!-- Attributes Tab --}}
+        <div class="tab module" data-group="primary" data-tab="module">
+            {{!-- As you add new fields, add them in here! --}}
+        </div>
+        {{!-- Description Tab --}}
+        <div class="tab overdrive" data-group="primary" data-tab="overdrive">
+            {{!-- As you add new fields, add them in here! --}}
+        </div>
+        
+        {{!-- Attributes Tab --}}
+        <div class="tab background" data-group="primary" data-tab="background">
             {{!-- As you add new fields, add them in here! --}}
         </div>
     </section>
