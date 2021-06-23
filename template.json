@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "NPC"],
+    "types": ["character", "npc"],
     "templates": {
       "base": {
         "Point de sante": {
